@@ -8,7 +8,12 @@ class StringTest {
 
 	@Test
 	void test() {
-		fail("Not yet implemented");
+		int length = "ABCD".length();
+		
+		// Assert length == 4
+		// Write test code
+		// Invoke method square(4) Code under test
+		// Checks in place - 16 => Assertions
 	}
 
 }
