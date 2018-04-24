@@ -24,6 +24,16 @@ class StringTest {
 		String result = str.toUpperCase();
 		
 		assertEquals("ABCD", result);
+		assertNotNull(result);
+		// assertNull(result);
+	}
+	
+	@Test
+	void containsBasic() {
+		String str = "abcdefgh";
+		boolean result = str.contains("cddef");
+		assertEquals(false, result);
+		assertFalse(result);
 	}
 
 }
