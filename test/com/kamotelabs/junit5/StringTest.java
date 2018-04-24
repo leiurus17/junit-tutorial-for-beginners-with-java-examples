@@ -9,8 +9,8 @@ class StringTest {
 	@Test
 	void test() {
 		int actualLength = "ABCD".length();
-		int expectedLength = 4;
-		
+		int expectedLength = 5;
+		assertEquals(expectedLength, actualLength);
 		// Assert length == 4
 		// Write test code
 		// Invoke method square(4) Code under test
