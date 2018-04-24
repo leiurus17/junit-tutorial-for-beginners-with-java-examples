@@ -8,7 +8,8 @@ class StringTest {
 
 	@Test
 	void test() {
-		int length = "ABCD".length();
+		int actualLength = "ABCD".length();
+		int expectedLength = 4;
 		
 		// Assert length == 4
 		// Write test code
