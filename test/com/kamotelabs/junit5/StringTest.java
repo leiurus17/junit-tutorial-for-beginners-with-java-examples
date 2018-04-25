@@ -21,19 +21,25 @@ class StringTest {
 	@Test
 	void toUpperCaseTest() {
 		String str = "abcd";
-		String result = str.toUpperCase();
-		
-		assertEquals("ABCD", result);
-		assertNotNull(result);
+		assertEquals("ABCD", str.toUpperCase());
+		assertNotNull(str.toUpperCase());
 		// assertNull(result);
 	}
 	
 	@Test
 	void containsBasic() {
 		String str = "abcdefgh";
-		boolean result = str.contains("cddef");
-		assertEquals(false, result);
-		assertFalse(result);
+		assertEquals(false, str.contains("cddef"));
+		assertFalse(str.contains("cddef"));
+	}
+	
+	@Test
+	void splitBasic() {
+		String str = "abc def ghi";
+		String[] actualResult = str.split(" ");
+		String[] expectedResult = new String[] {"abc", "def", "ghi"};
+		
+		assertArrayEquals(actualResult, expectedResult);
 	}
 
 }
