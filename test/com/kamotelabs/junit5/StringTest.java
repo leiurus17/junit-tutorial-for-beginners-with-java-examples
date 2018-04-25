@@ -21,6 +21,7 @@ class StringTest {
 	@Test
 	void toUpperCaseTest() {
 		String str = "abcd";
+		
 		assertEquals("ABCD", str.toUpperCase());
 		assertNotNull(str.toUpperCase());
 		// assertNull(result);
@@ -29,6 +30,7 @@ class StringTest {
 	@Test
 	void containsBasic() {
 		String str = "abcdefgh";
+		
 		assertEquals(false, str.contains("cddef"));
 		assertFalse(str.contains("cddef"));
 	}
