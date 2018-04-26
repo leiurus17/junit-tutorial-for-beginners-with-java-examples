@@ -1,16 +1,20 @@
 package com.kamotelabs.junit5;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestInfo;
 
 class StringTest {
 
 	@BeforeEach
-	void beforeEach() {
-		System.out.println("Initialize Test Data for each test.");
+	void beforeEach(TestInfo info) {
+		System.out.println("Initialize Test Data " + info.getDisplayName());
 	}
 	
 	@AfterEach
