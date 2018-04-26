@@ -2,6 +2,7 @@ package com.kamotelabs.junit5;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,11 @@ class StringTest {
 	@BeforeEach
 	void beforeEach() {
 		System.out.println("Initialize Test Data for each test.");
+	}
+	
+	@AfterEach
+	void afterEach() {
+		System.out.println("Clean up Test Data.");
 	}
 
 	@Test
