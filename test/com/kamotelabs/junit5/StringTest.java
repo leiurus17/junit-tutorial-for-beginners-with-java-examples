@@ -12,12 +12,14 @@ import org.junit.jupiter.api.TestInfo;
 
 class StringTest {
 
-	@BeforeEach
+	// TestInfo class is not present in JUnit 4
+	
+	@BeforeEach // @Before in JUnit 4
 	void beforeEach(TestInfo info) {
 		System.out.println("Initialize Test Data " + info.getDisplayName());
 	}
 	
-	@AfterEach
+	@AfterEach // @Before in Junit 4
 	void afterEach(TestInfo info) {
 		System.out.println("Clean up Test Data " + info.getDisplayName());
 	}
