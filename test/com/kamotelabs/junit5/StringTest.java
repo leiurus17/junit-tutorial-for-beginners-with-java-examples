@@ -18,8 +18,8 @@ class StringTest {
 	}
 	
 	@AfterEach
-	void afterEach() {
-		System.out.println("Clean up Test Data.");
+	void afterEach(TestInfo info) {
+		System.out.println("Clean up Test Data " + info.getDisplayName());
 	}
 
 	@Test
