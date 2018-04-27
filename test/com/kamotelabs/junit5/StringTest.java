@@ -5,12 +5,26 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
+import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 class StringTest {
+	
+	@BeforeAll
+	static void beforeAll() {
+		System.out.println("Initialize connection to database.");
+	}
+	
+	@AfterAll
+	static void afterAll() {
+		System.out.println("Close connection to database.");
+	}
+	
+	
 
 	// TestInfo class is not present in JUnit 4
 	
