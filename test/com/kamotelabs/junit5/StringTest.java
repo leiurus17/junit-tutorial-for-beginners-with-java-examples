@@ -23,8 +23,6 @@ class StringTest {
 	static void afterAll() {
 		System.out.println("Close connection to database.");
 	}
-	
-	
 
 	// TestInfo class is not present in JUnit 4
 	
