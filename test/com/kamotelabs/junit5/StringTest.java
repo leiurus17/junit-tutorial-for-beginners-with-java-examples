@@ -78,8 +78,6 @@ class StringTest {
 	@Test
 	void lengthExceptionTest() {
 		String str = null;
-		int expectedLength = 4;
-
 		assertThrows(NullPointerException.class,
 				() -> {
 					str.length();
