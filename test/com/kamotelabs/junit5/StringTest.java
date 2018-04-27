@@ -1,5 +1,6 @@
 package com.kamotelabs.junit5;
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
@@ -85,6 +86,14 @@ class StringTest {
 					str.length();
 				}
 				);
+	}
+	
+	@Test
+	void lengthGreaterThanZero() {
+		assertTrue("ABCD".length() > 0);
+		assertTrue("ABC".length() > 0);
+		assertTrue("A".length() > 0);
+		assertTrue("DEF".length() > 0);
 	}
 
 }
