@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
@@ -72,6 +73,18 @@ class StringTest {
 		String[] expectedResult = new String[] { "abc", "def", "ghi" };
 
 		assertArrayEquals(actualResult, expectedResult);
+	}
+	
+	@Test
+	void lengthExceptionTest() {
+		String str = null;
+		int expectedLength = 4;
+
+		assertThrows(NullPointerException.class,
+				() -> {
+					str.length();
+				}
+				);
 	}
 
 }
