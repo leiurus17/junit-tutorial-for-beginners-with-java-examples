@@ -113,5 +113,12 @@ class StringTest {
 		assertEquals(capitalizedWord, word.toUpperCase());
 		
 	}
+	
+	@ParameterizedTest
+	@CsvSource(value = {"abcd, 4", "abc, 3", "'', 0", "abcdef, 6"})
+	void expectedLength(String word, int expectedLength) {
+		assertEquals(expectedLength, word.length());
+		
+	}
 
 }
