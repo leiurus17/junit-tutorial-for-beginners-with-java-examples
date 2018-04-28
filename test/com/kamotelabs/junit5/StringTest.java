@@ -99,24 +99,4 @@ class StringTest {
 		assertTrue("A".length() > 0);
 		assertTrue("DEF".length() > 0);
 	}
-	
-	@ParameterizedTest
-	@ValueSource(strings = {"ABCD", "ABC", "A", "DEF"})
-	void lengthGreaterThanZeroUsingParameterizeTest(String str) {
-		assertTrue(str.length() > 0);
-	}
-	
-	// Always Expected, Actual
-	
-	@ParameterizedTest
-	@CsvSource(value = {"abcd, ABCD", "abc, ABC", "'', ''", "abcdef, ABCDEF"})
-	void upperCase(String word, String capitalizedWord) {
-		assertEquals(capitalizedWord, word.toUpperCase());	
-	}
-	
-	@ParameterizedTest(name = "{0} length is {1}")
-	@CsvSource(value = {"abcd, 4", "abc, 3", "'', 0", "abcdef, 6"})
-	void expectedLength(String word, int expectedLength) {
-		assertEquals(expectedLength, word.length());
-	}
 }
