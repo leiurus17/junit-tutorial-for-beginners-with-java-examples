@@ -103,20 +103,23 @@ class StringTest {
 	}
 	
 	@Nested
+	@DisplayName("For an empty String")
 	class EmptyStringTests {
 		
-		
 		@BeforeEach
+		
 		void setToEmpty() {
 			str = "";
 		}
 		
 		@Test
+		@DisplayName("length should be zero")
 		void lengthIsZero() {
 			assertEquals(0, str.length());
 		}
 		
 		@Test
+		@DisplayName("string should be empty")
 		void upperCaseIsEmpty() {
 			assertEquals("", str.toUpperCase());
 		}
