@@ -11,14 +11,12 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.CsvSource;
-import org.junit.jupiter.params.provider.ValueSource;
 
+@Disabled
 class StringTest {
 	
 	@BeforeAll
@@ -55,6 +53,7 @@ class StringTest {
 		// Checks in place - 16 => Assertions
 	}
 
+	@Disabled
 	@Test
 	void toUpperCaseTest() {
 		String str = "abcd";

@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 
 
-public class SamplePerformanceTest {
+public class SamplePerformanceTestLambda {
 	
 	@Test
 	void performanceTest() {
