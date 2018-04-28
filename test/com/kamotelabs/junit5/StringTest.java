@@ -13,11 +13,14 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInfo;
 
 @Disabled
 class StringTest {
+	
+	private String str;
 	
 	@BeforeAll
 	static void beforeAll() {
@@ -97,5 +100,25 @@ class StringTest {
 		assertTrue("ABC".length() > 0);
 		assertTrue("A".length() > 0);
 		assertTrue("DEF".length() > 0);
+	}
+	
+	@Nested
+	class EmptyStringTests {
+		
+		
+		@BeforeEach
+		void setToEmpty() {
+			str = "";
+		}
+		
+		@Test
+		void lengthIsZero() {
+			assertEquals(0, str.length());
+		}
+		
+		@Test
+		void upperCaseIsEmpty() {
+			assertEquals("", str.toUpperCase());
+		}
 	}
 }
